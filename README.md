@@ -15,4 +15,3 @@ A GiHub space for a trainee of "GoIT FE" training course
     ==> e.g.
 
     https://github.com/axZerk/goit-js-course/blob/master/js-4/.jshintrc
-# gofe-jsm-12

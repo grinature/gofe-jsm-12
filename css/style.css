@@ -1,0 +1,205 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+:root {
+    --header-height: 20rem;
+    /*--header-height: 14rem;*/
+}
+
+
+/* 60rem = 960px */
+.wrapper-main {
+
+    margin: 0 auto;
+
+    /* Test */
+    /* my own mild green-colour, like asalad */
+    /*background-color: rgba(225, 242, 176, 0.5);*/
+}
+
+.header-core {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: var(--header-height);
+
+    padding-top: 1.5rem;
+    background-image:
+        url('../img/alma_antennas-wallpaper-1152x720.jpeg');
+    background-position: center;
+
+    /*height: var(--carousel-item-height);*/
+}
+
+
+.main-content {
+    /*margin-top: calc(var(--header-height) + 22rem);*/
+    /*margin-top: 335px;*/
+    margin-top: calc( var(--header-height) );
+
+    background-color: hsla(180, 100%, 50%, 0.12);
+
+    background-image: url('../img/carina_nebula-bg-01.jpeg');
+    background-position: center;
+    background-size: cover;
+
+    border-top: 2.4rem solid rgba(0, 188, 212, 0.43);
+}
+
+    .core-container {
+        margin: auto;
+
+        /*width: 84%;*/
+        /*width: 94%;*/
+        width: 60rem;
+
+    }
+
+        .constellation {
+            padding-top: 2rem;
+        }
+            .constellation h1 {
+                /*background-color: hsla(360, 100%, 100%, 0.5);*/
+
+                margin-bottom: 2.4rem;
+                width: 74%;
+                border: 2px solid hsla(201, 55%, 54%, 0.65);
+                /* padding: 0 2rem; */
+                /*padding: 1rem 1.7rem;*/
+                padding: 1.2rem 3.4rem;
+
+                background-color: hsla(199, 98%, 48%, 0.41);
+                background-clip: content-box;
+                color: #ecea76;
+
+                font: 1.5rem/1 sans-serif;
+
+                    font-family:  'Marck Script', cursive;
+                    font-size: 2rem;
+                    color: hsl(187, 57%, 81%);
+
+
+                line-height: 3rem;
+                /*text-transform: uppercase;*/
+                text-align: center;
+
+                transition: all 400ms;
+            }
+
+
+            .constellation h1:hover {
+                border-color: hsl(208, 79%, 74%);
+                color: rgb(255, 255, 0);
+            }
+
+            table {
+                margin-bottom: 1rem;
+
+                /*background-color: hsla(199, 98%, 48%, 0.41);*/
+                background-color: hsla(199, 98%, 48%, 0.13);
+                background-clip: content-box;
+                color: #ecea76;
+
+                /* width: 74%; */
+                border: 2px solid hsla(201, 55%, 54%, 0.65);
+                /*padding: 0 2rem;*/
+                /*padding: 1rem 1.7rem;*/
+                /*padding: 1.2rem 3.4rem;*/
+                padding: 0.8rem 1.4rem;
+
+                /* background-color: hsla(199, 98%, 48%, 0.41); */
+                /* background-clip: content-box; */
+                color: hsl(187, 57%, 81%);
+                font: 1rem sans-serif;
+                line-height: 1.6rem;
+                /*text-transform: uppercase;*/
+                text-align: left;
+                transition: all 400ms;
+                /*padding: 0.4rem 0.2rem;*/
+                table-layout: fixed;
+                border-collapse: separate;
+
+            }
+
+            table:hover {
+                border-color: hsl(208, 79%, 74%);
+            }
+                .head__header-row {
+                    background-color: rgba(8, 150, 183, 0.65);
+                }
+
+                .head__header-row:first-child {
+                    background-color: rgba(0, 139, 139, 0.7);
+                    text-align: center;
+                }
+
+                .head__header-row:first-child th, .head__header-row:first-child td {
+                    color: greenyellow;
+                }
+
+                td, th {
+                    /* margin-left: -0.6rem; */
+                    padding: 0.4rem 2.0rem;
+                    border-bottom: 2px solid hsla(201, 55%, 54%, 0.65);
+                    border-right: 2px solid hsla(201, 55%, 54%, 0.65);
+
+                    line-height: 1.8rem;
+                }
+
+                th {
+                    color: white;
+                    vertical-align: middle;
+                }
+
+                tr {
+                    transition: background-color 400ms;
+                }
+                tr:hover {
+                    background-color: hsla(187, 52%, 75%, 0.32);
+                }
+
+                td {
+                    transition: color 500ms;
+                }
+                td:hover {
+                    color: greenyellow;
+                }
+
+                th:first-child {
+                /*     margin-left: 2rem; */
+                /*     padding-left: 1rem */
+                }
+
+                th:last-child, td:last-child {
+                    border-right-style: none;
+                }
+
+                .body__data-row:last-child th, .body__data-row:last-child td{
+                    border-bottom-style: none;
+                }
+
+                 .latin-decor {
+                     /*font-family:  'Marck Script', cursive;
+                     font-size: 2.4rem;*/
+                     font: 1.7rem 'Marck Script', cursive;
+                     vertical-align: middle;
+                 }
+
+                .numeric-data {
+                    text-align: right;
+                }

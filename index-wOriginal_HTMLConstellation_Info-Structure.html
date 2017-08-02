@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- <html lang="en"> -->
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Homework - Modules 11,12</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/reset-em.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.mycarousel.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- https://cdnjs.com/libraries/ -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js" integrity="sha256-jCRPoAgIIooCTnLmaSyKMPrFgFh6/T0e8c3i+KkZZ6U=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.8/handlebars.js" integrity="sha256-1a54WaWEbX3FFsS2Ko6dUSj50JUeH/KeLY5IU2HbIBg=" crossorigin="anonymous"></script>
+
+    <script src="js/logger.js"></script>
+    <script src="js/jquery.mycarousel.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+
+    <div class="wrapper-main">
+
+        <header class="header-core">
+
+            <!-- the Carousel goes here
+                * the CORE Carusel container
+                    * LeftSide navigation control
+                    * the inner edge Carousel container
+                    * the Carousel Item element(s)
+                        * { an Img + its Description }
+                    * RightSide navigation control
+            -->
+            <script type="text/template" id="carousel-lodash-template">
+                <!-- <div class="jcarousel"> -->
+                <div class="<%= coreCarouselContainerClass %>">
+                    <!-- <ul class="jcarousel-list"> -->
+                    <ul class="<%= innerCarouselContainerClass %>">
+                        <% for( let itemCounter=0, itemQuantity = carouselItems.length; itemCounter < itemQuantity; itemCounter++ ) { %>
+                            <% const currentItem = carouselItems[ itemCounter ]; %>
+                            <li class="<%= carouselItemClass %>">
+                                <img src="img/<%= coreImageName + '-' + ((itemCounter + 1) + '').replace(/^(\d)\b/, '0$1') + '-' + coreImageNamePrefix + '\.' + imageExtension %>" alt="<%- currentItem.imageItemDescription %>">
+                                <p><%= currentItem.caption %></p>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>  <!-- eof jcarousel, the inner edge Carousel container -->
+            </script>    <!--  <%= coreCarouselContainerClass %> -->
+
+        </header>    <!-- eo Header -->
+
+
+        <!-- (section.city-topic>h2.section-header+(p.info{Lorem})*2)*5 -->
+        <main class="main-content">
+            <div class="core-container">
+                <section class="constellation">
+                    <h1>Ursa Major constellation</h1>
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Латинское название</th>
+                                <td>Ursa Major</td>
+                            </tr>
+                            <tr>
+                                <th>Изображение созвездия</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Звездное полушарие (расположение)</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Что напоминает по форме</th>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <th rowspan="5">Древние названия</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th>Количество звезд созвездия</th>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table>
+                        <thead>
+                            <tr class="head__header-row">
+                                <th colspan="3">Описания звезд созвездия</th>
+                            </tr>
+                            <tr class="head__header-row">
+                                <th>Имя</th>
+                                <th>Перевод с арабского</th>
+                                <th>Звездная величина, <span>m</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="body__data-row">
+                                <td>Дубхе</td>
+                                <td>медведь</td>
+                                <td class="numeric-data">1.81</td>
+                            </tr>
+                            <tr class="body__data-row">
+                                <td></td>
+                                <td></td>
+                                <td class="numeric-data"></td>
+                            </tr>
+                            <tr class="body__data-row">
+                                <td></td>
+                                <td></td>
+                                <td class="numeric-data"></td>
+                            </tr>
+                            <tr class="body__data-row">
+                                <td></td>
+                                <td></td>
+                                <td class="numeric-data"></td>
+                            </tr>
+                            <tr class="body__data-row">
+                                <td></td>
+                                <td></td>
+                                <td class="numeric-data"></td>
+                            </tr>
+                            <tr class="body__data-row">
+                                <td></td>
+                                <td></td>
+                                <td class="numeric-data"></td>
+                            </tr>
+                            <tr class="body__data-row">
+                                <td></td>
+                                <td></td>
+                                <td class="numeric-data"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <table>
+                        <thead>
+                            <tr class="head__header-row">
+                                <th>Соседние созвездия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>Дракон</li>
+                                        <li>Жираф</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+                <!-- eof constellation -->
+            </div> <!-- eof core-container -->
+        </main>
+
+
+    </div>    <!-- eo wrapper-main -->
+
+</body>
+</html>

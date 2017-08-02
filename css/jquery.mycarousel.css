@@ -1,0 +1,164 @@
+.wrapper-carousel {
+    --carousel-wrapper-width: 60rem;
+    --carousel-wrapper-border-width: 4px;
+    --carousel-wrapper-height: 18rem;
+
+    --carousel-items-quantity: 4;
+
+    --carousel-wrapper-pad-vert: 0.4rem;
+
+    --carousel-width: calc(var(--carousel-wrapper-width) - 2 * (var(--carousel-switch-width) + var(--carousel-wrapper-border-width)));
+
+    --carousel-height: var(--carousel-wrapper-height);
+
+    --carousel-switch-width: 6rem;
+    --carousel-switch-height: calc(var(--carousel-height) - 2 * var(--carousel-wrapper-border-width));
+    --carousel-navigation-control-color : yellow;
+
+    --carousel-item-container-height: var(--carousel-height);
+
+    --carousel-item-container-width: calc(var(--carousel-item-total-hor-space));
+
+    --carousel-item-margin-right: 0.8rem;
+    --carousel-item-total-hor-space: calc((var(--carousel-width) - (var(--carousel-items-quantity) - 1) * var(--carousel-item-margin-right)) / var(--carousel-items-quantity));
+
+    --carousel-item-caption-height: 1.5rem;
+    --carousel-item-caption-color: orange;
+
+
+    --carousel-nav-border: 1px solid rgba(254, 254, 254, 0.61);
+    --carousel-nav-bg-color: rgba(255, 248, 220, 0.34);
+    --carousel-nav-bg-color-hover: rgba(255, 248, 220, 0.73);
+
+    --carousel-nav-color: rgba(255, 255, 0, 0.7);
+    --carousel-nav-color-hover: rgba(255, 255, 0, 1.0);
+
+    /* wheat */
+    --carousel-active-page-bg-color: rgba(245, 222, 179, 0.79);
+
+    position: relative;
+    margin: 0 auto;
+
+    width: var(--carousel-wrapper-width);
+    height: var(--carousel-height);
+
+
+    border: var(--carousel-wrapper-border-width) solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 7px 2px #3f3aea, 0 0 20px 6px rgba(224, 217, 140, 0.87);
+
+    padding-top: var(--carousel-wrapper-pad-vert);
+    padding-bottom: var(--carousel-wrapper-pad-vert);
+}
+
+/* a Carousel definition  */
+/* We build a HORIZONTAl one */
+.jcarousel {
+    display: none;
+
+    position: relative;
+    overflow: hidden;
+
+    float: left;
+
+    width: var(--carousel-width);
+
+    /*overflow: visible;*/
+
+    /*width: 60%;*/
+    height: 100%;
+
+    text-align: center;
+}
+
+.jcarousel.jcarousel-on {
+    display: block;
+}
+
+.jcarousel-switch:hover {
+    background-color: var(--carousel-nav-bg-color-hover);
+}
+
+.jcarousel-switch {
+    width: var(--carousel-switch-width);
+    height: var(--carousel-switch-height);
+    height: 100%;
+
+    border: var(--carousel-nav-border);
+
+    background-color: var(--carousel-nav-bg-color);
+    background-repeat: no-repeat;
+    background-position: 0.7rem;
+
+    color: var(--carousel-navigation-control-color);
+
+    font-family: sans-serif;
+    text-align: center;
+
+    transition: all 0.6s;
+
+    cursor: pointer;
+}
+
+    .switch-title {
+        position: absolute;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    .jcarousel-prev {
+        float: left;
+    }
+
+    .jcarousel-next {
+        float: right;
+    }
+
+
+        .carousel__list {
+            position: relative;
+
+            width: 20000rem;
+            height: 100%;
+
+            left: 0;
+
+            transition: left 0.9s;
+        }
+
+        .carousel__item {
+            position: relative;
+            float: left;
+
+            width: var(--carousel-item-container-width);
+            height: 100%;
+
+            margin-right: var(--carousel-item-margin-right);
+
+            transition: background-color 700ms;
+        }
+
+        .carousel__item:hover {
+            background-color: hsla(207, 90%, 54%, 0.58);
+            box-shadow: 0 0 12px 4px hsla(207, 90%, 54%, 0.58);
+        }
+
+
+            .carousel__item img {
+                max-width: 100%;
+                height: auto;
+                max-height: calc(100% - var(--carousel-item-caption-height));
+            }
+
+            .carousel__item p {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                line-height: var(--carousel-item-caption-height);
+
+                color: var(--carousel-item-caption-color);
+
+                font-weight: bold;
+            }

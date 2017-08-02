@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- <html lang="en"> -->
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Homework - Modules 11,12</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/reset-em.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.mycarousel.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- https://cdnjs.com/libraries/ -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js" integrity="sha256-jCRPoAgIIooCTnLmaSyKMPrFgFh6/T0e8c3i+KkZZ6U=" crossorigin="anonymous"></script>
+
+    <script src="js/logger.js"></script>
+    <script src="js/jquery.mycarousel.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+
+    <div class="wrapper-main">
+
+        <header class="header-core">
+            <div class="core-container">
+
+                <!-- the Carousel goes here
+                    * the CORE Carusel container
+                        * LeftSide navigation control
+                        * the inner edge Carousel container
+                        * the Carousel Item element(s)
+                            * { an Img + its Description }
+                        * RightSide navigation control
+                -->
+
+                <!-- Phase 01: a Carousel before wrapping by Javascript-based code -->
+                <div class="jcarousel">
+
+                    <!-- <ul class="jcarousel-list"> -->
+                    <ul class="carousel__list">
+
+                        <li class="carousel__item"><img src="img/uk-london-01-small.jpeg" alt="a caption, 01"><p>Caption 01</p></li>
+                        <li class="carousel__item"><img src="img/uk-london-02-small.jpeg" alt="a caption, 02"><p>Caption 02</p></li>
+                        <li class="carousel__item"><img src="img/uk-london-03-small.jpeg" alt="a caption, 03"><p>Caption 03</p></li>
+                        <li class="carousel__item"><img src="img/uk-london-04-small.jpeg" alt="a caption, 04"><p>Caption 04</p></li>
+                        <li class="carousel__item"><img src="img/uk-london-05-small.jpeg" alt="a caption, 05"><p>Caption 05</p></li>
+                        <li class="carousel__item"><img src="img/uk-london-06-small.jpeg" alt="a caption, 06"><p>Caption 06</p></li>
+                        <li class="carousel__item"><img src="img/uk-london-07-small.jpeg" alt="a caption, 07"><p>Caption 07</p></li>
+                        <li class="carousel__item"><img src="img/uk-london-08-small.jpeg" alt="a caption, 08"><p>Caption 08</p></li>
+                        <li class="carousel__item"><img src="img/uk-london-09-small.jpeg" alt="a caption, 09"><p>Caption 09</p></li>
+                        <li class="carousel__item"><img src="img/uk-london-10-small.jpeg" alt="a caption, 10"><p>Caption 10</p></li>
+                        <li class="carousel__item"><img src="img/uk-london-11-small.jpeg" alt="a caption, 11"><p>Caption 11</p></li>
+
+                    </ul>    <!-- eof jcarousel-list -->
+
+                </div> <!-- eof jcarousel, the inner edge Carousel container-->
+
+
+
+
+                <!-- Phase 02: the ultimate DOM-structure built for a Carousel widget  -->
+                <div class="wrapper-carousel" style="display:none;">
+                    <!-- Controls { Left, Right } -->
+                    <!-- Prev-->
+                    <div class="jcarousel-prev jcarousel-switch"><span class="switch-title">Left</span></div>
+                    <div class="jcarousel2">
+
+                        <!-- <ul class="jcarousel-list"> -->
+                        <ul class="carousel__list">
+
+                            <!-- <ul> -->
+                            <li class="carousel__item"><img src="img/uk-london-01-small.jpeg" alt="a caption, 01"><p>Caption 01</p></li>
+                            <li class="carousel__item"><img src="img/uk-london-02-small.jpeg" alt="a caption, 02"><p>Caption 02</p></li>
+                            <li class="carousel__item"><img src="img/uk-london-03-small.jpeg" alt="a caption, 03"><p>Caption 03</p></li>
+                            <li class="carousel__item"><img src="img/uk-london-04-small.jpeg" alt="a caption, 04"><p>Caption 04</p></li>
+                            <li class="carousel__item"><img src="img/uk-london-05-small.jpeg" alt="a caption, 05"><p>Caption 05</p></li>
+                            <li class="carousel__item"><img src="img/uk-london-06-small.jpeg" alt="a caption, 06"><p>Caption 06</p></li>
+                            <li class="carousel__item"><img src="img/uk-london-07-small.jpeg" alt="a caption, 07"><p>Caption 07</p></li>
+                            <li class="carousel__item"><img src="img/uk-london-08-small.jpeg" alt="a caption, 08"><p>Caption 08</p></li>
+                            <li class="carousel__item"><img src="img/uk-london-09-small.jpeg" alt="a caption, 09"><p>Caption 09</p></li>
+                            <li class="carousel__item"><img src="img/uk-london-10-small.jpeg" alt="a caption, 10"><p>Caption 10</p></li>
+                            <li class="carousel__item"><img src="img/uk-london-11-small.jpeg" alt="a caption, 11"><p>Caption 11</p></li>
+
+                        </ul>
+
+                    </div> <!-- eof jcarousel, the inner edge Carousel container-->
+
+                    <!-- Next-->
+                    <div class="jcarousel-next jcarousel-switch"><span class="switch-title">Right</span></div>
+
+                </div> <!-- eof wrapper-carousel -->
+
+            </div>    <!-- core-container -->
+        </header>    <!-- eo Header -->
+
+
+        <!-- <main class="main-content">
+            <div class="core-container">
+
+            </div>
+        </main> -->
+
+
+    </div>    <!-- eo wrapper-main -->
+
+</body>
+</html>
